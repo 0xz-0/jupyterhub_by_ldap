@@ -12,20 +12,17 @@
    1. env install:`poetry install`
    2. auth unit:`python -m unittest auth/test_auth.py`
 
-3. Build Image
-    ```shell
-        docker build -t jupyterhub:v1 -f ./build/Dockerfile .
-    ```
+3. Build Image:`docker build -t jupyterhub:v1 -f ./build/Dockerfile .`
 
 4. Run Container
-    ```shell
-        docker run -d \
-        --name jupyterhub \
-        --env-file .env \
-        -v $PWD/volume/file:/home \
-        -p 8000:8000 \
-        jupyterhub:v1
-    ```
+```shell
+docker run -d \
+--name jupyterhub \
+--env-file .env \
+-v $PWD/volume/file:/home \
+-p 8000:8000 \
+jupyterhub:v1
+```
     * notice: If volume is existed. Maybe it cause a error with permissions.
   
 5. [optional] Check Container Service Runner

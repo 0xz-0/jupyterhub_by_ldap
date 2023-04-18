@@ -12,20 +12,17 @@
    1. 安装环境依赖:`poetry install`
    2. 执行单元检测:`python -m unittest auth/test_auth.py`
 
-3. 构建镜像
-    ```shell
-        docker build -t jupyterhub:v1 -f ./build/Dockerfile .
-    ```
+3. 构建镜像`docker build -t jupyterhub:v1 -f ./build/Dockerfile .`
 
 4. 启动容器
-    ```shell
-        docker run -d \
-        --name jupyterhub \
-        --env-file .env \
-        -v $PWD/volume/file:/home \
-        -p 8000:8000 \
-        jupyterhub:v1
-    ```
+```shell
+docker run -d \
+--name jupyterhub \
+--env-file .env \
+-v $PWD/volume/file:/home \
+-p 8000:8000 \
+jupyterhub:v1
+```
     * 注意: 如果挂载的文件已经存在，则可能会产生一个由权限不足导致的问题
   
 5. [可选]检查服务是否在运行
