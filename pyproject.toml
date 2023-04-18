@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "jupyterhub-by-ldap"
+version = "0.1.0"
+description = ""
+authors = ["z"]
+readme = "README.md"
+packages = [{include = "jupyterhub_by_ldap"}]
+
+[[tool.poetry.source]]
+name = "thu"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+tornado = "^6.3"
+jupyterhub = "^3.1.1"
+python-ldap = "^3.4.3"
+python-dotenv = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

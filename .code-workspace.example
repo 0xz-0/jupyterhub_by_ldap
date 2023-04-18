@@ -1,0 +1,41 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.autoSave": "afterDelay",
+		"workbench.editor.wrapTabs": true,
+		"editor.wordWrap": "on",
+		"editor.rulers": [
+			160,
+		],
+		"workbench.colorCustomizations": {
+			"editorRuler.foreground": "#ff4081"
+		},
+		"cSpell.words": [
+			"dotenv",
+			"getpwnam",
+			"jupyterhub",
+			"Liunx"
+		],
+
+		"python.defaultInterpreterPath": "~/anaconda3/bin/python",
+		"python.envFile": "${workspaceFolder}/.env",
+		"python.languageServer": "Pylance",
+		"python.autoComplete.extraPaths": [],
+		"python.analysis.extraPaths": [],
+		"python.analysis.completeFunctionParens": true,
+
+		"python.testing.unittestArgs": [
+			"-v",
+			"-s",
+			"./auth",
+			"-p",
+			"test_*.py"
+		],
+		"python.testing.pytestEnabled": false,
+		"python.testing.unittestEnabled": true
+	}
+}
